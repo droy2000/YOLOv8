@@ -17,27 +17,9 @@ import urllib.request
 
 
 
-#===================================For YOUTUBE video=========================================
-# source = "https://youtu.be/YbzX7oGhm8w"
-
-# # Create a pafy object
-# video = pafy.new(source)
-
-# # Get the best available video stream
-# best_stream = video.getbest()
-# stream = best_stream.url
-
-# cap = cv.VideoCapture(stream)
-#--------------------------------------------------------------------
-
-#============================For Downloaded video==================================
-# stream = 'YOLOv8\The Most Lethal Fighter Jet Ever Built _ F-22 Raptor.mp4'
-# cap = cv.VideoCapture(stream)
-#-------------------------------------------------------------------------
-
 #===============================For ip streams==========================================
 url = 'https://ee6c-139-167-217-242.ngrok-free.app/video'
-
+#---------------------------------------------------------------------------------------
 
 def retrieve_frames(url, output_frames):
     buffer_size = 4096
@@ -65,15 +47,6 @@ thread1.start()
 #-----------------------------------------------------------------------------------
 
 
-
-# cap.open('http://192.168.43.252/video')
-# print (cap.isOpened())
-# img_size = cap.shape[:2]
-# print(img_size)
-
-
-
-
 # Customize the size of video promt opened of streaming
 
 # cap.set(3, 320)   # set the width of the video box
@@ -98,8 +71,6 @@ classNames = ["person","bicycle","car","motorbike","aeroplane","bus","train","tr
 
 
 while True:
-    #==================For video captureing===================
-    # ignore, img = cap.read()
 
     # ==================For live stream capturing===================
     if len(output_frames)>0:
